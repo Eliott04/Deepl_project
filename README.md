@@ -2,10 +2,10 @@
 
 ## Overview
 
-This project is an **independent reimplementation** of **MatchViT**, based on the research paper *[MatchViT: Light-weight Vision Transformer with Matching Separable Self-attention](https://openreview.net/forum?id=7EUYamNuJ9)* (Jiacheng Liao et al., 2026). The architecture combines convolutional feature extraction with **Matching Separable Self-Attention (MaSSA)** and **context-gated feed-forward networks** to reduce the computational cost of vision transformers.
+This project is an **independent, from-scratch PyTorch reimplementation** of **MatchViT**, based on the research paper *[MatchViT: Light-weight Vision Transformer with Matching Separable Self-attention](https://openreview.net/forum?id=7EUYamNuJ9)* (Jiacheng Liao et al.; submitted to ICLR 2026). The proposed architecture combines convolutional feature extraction with two key mechanisms introduced in the paper: **Matching Separable Self-Attention (MaSSA)** and **Context-Gated Feed-Forward Networks (Context-Gated FFN)**, designed to improve computational efficiency.
 
 **Our additional work** focuses on evaluating the reimplementation rather than proposing a new attention mechanism:
-- Implementing the architecture and attention blocks in PyTorch.
+- **Implementing the two proposed mechanisms—MaSSA and Context-Gated FFN—from scratch in PyTorch**, along with the MatchViT architecture.
 - **Training and comparing MatchViT with MobileViT on Imagenette**, a 10-class classification dataset.
 - Studying **MaSSA versus standard multi-head self-attention (MHSA)** through timing and computational-cost measurements; the code also supports switching attention blocks in MatchViT.
 - Tracking accuracy, trainable parameters and multiply–accumulate operations (MACs).
